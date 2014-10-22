@@ -1,0 +1,4 @@
+alias l="ls -a -1"
+
+# locations
+alias blog="cd mas/wordpress/wp-content/themes/mas"
