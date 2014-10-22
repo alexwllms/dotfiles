@@ -34,6 +34,7 @@ fi
 # Name tabs
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 
-# List of keyboard shortcuts
-alias l="ls -a -1"
-alias blog="cd mas/wordpress/wp-content/themes/mas"
+# Load aliases from .aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
