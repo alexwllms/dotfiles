@@ -44,7 +44,7 @@ set history=50
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
-set laststatus=2  " Always display the status line
+" set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set autoread      " Read changes to the file immediately
 
@@ -121,3 +121,5 @@ imap qq <Esc>
 
 " use the system clipboard
 set clipboard=unnamed
+
+autocmd FileType scss set iskeyword+=-
