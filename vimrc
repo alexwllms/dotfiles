@@ -129,3 +129,7 @@ imap jk <Esc>
 set clipboard=unnamed
 
 autocmd FileType scss set iskeyword+=-
+
+" set the tab title to the file name
+autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
+set title
