@@ -1,4 +1,13 @@
 alias l="ls -a -1"
+alias g="gitsh"
+
+# shortcuts for bundling gems
+alias b="bundle"
+alias bu="bundle update"
+alias be="bundle exec"
+
+# shortcuts for Bowndler
+alias bwi="bowndler install"
 
 # locations
 alias blog="cd mas/wordpress/wp-content/themes/mas"

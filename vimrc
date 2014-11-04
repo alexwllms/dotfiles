@@ -33,8 +33,13 @@ filetype plugin indent on    " required
 " possible, as it has side effects.
 set nocompatible
 
-" Leader
-let mapleader = " "
+" Set the leader key
+let mapleader = ","
+
+" Shortcuts
+:nnoremap <leader>w :w<Return>
+:nnoremap <leader>q :q<Return>
+:nnoremap <leader>wq :wq<Return>
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
@@ -116,8 +121,9 @@ set smartcase
 " Clear last search highlighting
 nnoremap <cr> :noh<CR><CR>:<backspace>
 
-" map jj to escape in insert mode only
-imap qq <Esc>
+" remap  escape in insert mode only
+imap <tab> <Esc>
+imap jk <Esc>
 
 " use the system clipboard
 set clipboard=unnamed

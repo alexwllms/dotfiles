@@ -38,3 +38,5 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
+
+export EDITOR=vim
