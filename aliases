@@ -1,5 +1,6 @@
 alias l="ls -a -1"
 alias g="gitsh"
+alias s="git status -b"
 
 # shortcuts for bundling gems
 alias b="bundle"

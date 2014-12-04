@@ -10,6 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Bundle 'JulesWang/css.vim'
 Plugin 'gmarik/Vundle.vim'
+Plugin 'thoughtbot/vim-rspec'
 
 " add plugins here
 Bundle 'cakebaker/scss-syntax.vim'
@@ -121,9 +122,11 @@ set smartcase
 " Clear last search highlighting
 nnoremap <cr> :noh<CR><CR>:<backspace>
 
+" turn off highlighting matching parens
+:let loaded_matchparen = 1
+
 " remap  escape in insert mode only
-imap <tab> <Esc>
-imap jk <Esc>
+imap jj <Esc>
 
 " use the system clipboard
 set clipboard=unnamed
@@ -133,3 +136,8 @@ autocmd FileType scss set iskeyword+=-
 " set the tab title to the file name
 autocmd BufEnter * let &titlestring = ' ' . expand("%:t")
 set title
+:let mapleader = ","
+map <Leader>t :w<CR>:call RunCurrentSpecFile()<CR>
+map <Leader>s :w<CR>:call RunNearestSpec()<CR>
+map <Leader>l :w<CR>:call RunLastSpec()<CR>
+map <Leader>a :w<CR>:call RunAllSpecs()<CR>
