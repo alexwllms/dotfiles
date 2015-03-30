@@ -1,6 +1,18 @@
-alias l="ls -a -1"
-alias g="gitsh"
-alias s="git status -b"
+alias l="ls -1"
+alias la="ls -a -1"
+
+alias gs="git status -b"
+alias gc="git commit"
+alias gb="git branch"
+alias gl="git log --graph"
+alias ga="git add --all :/"
+
+#Database shortcuts
+alias postgres="postgres -D /usr/local/var/postgres"
+
+# Project shortcuts
+alias rad="cd mas/rad"
+alias radc="cd mas/rad-consumer"
 
 # shortcuts for bundling gems
 alias b="bundle"
@@ -12,3 +24,6 @@ alias bwi="bowndler install"
 
 # locations
 alias blog="cd mas/wordpress/wp-content/themes/mas"
+
+# Running Karma tests
+alias karma="karma start spec/javascripts/karma.conf.js"

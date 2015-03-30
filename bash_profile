@@ -26,7 +26,7 @@ export PROMPT_COMMAND=setup_prompt
 # Load in the git branch prompt script.
 source ~/.git-prompt.sh
 
-export PS1="\w\$(__git_ps1) \$ "
+export PS1="\[\e[33m\]\w\[\e[m\]\$(__git_ps1)\[\e[33m\] \$ \[\e[m\]"
 export PS2='> '
 
 # Git autocompletion script
@@ -47,3 +47,5 @@ export EDITOR=vim
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Wrap git in 'hug'
+eval "$(hub alias -s)"

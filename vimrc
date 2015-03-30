@@ -1,35 +1,3 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Bundle 'JulesWang/css.vim'
-Plugin 'gmarik/Vundle.vim'
-Plugin 'thoughtbot/vim-rspec'
-
-" add plugins here
-Bundle 'cakebaker/scss-syntax.vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
 " Use Vim settings, rather then Vi settings. This setting must be as early as
 " possible, as it has side effects.
 set nocompatible
@@ -54,8 +22,14 @@ set incsearch     " do incremental searching
 set autowrite     " Automatically :write before running commands
 set autoread      " Read changes to the file immediately
 
-" turn on syntax highlighting
 syntax on
+colorscheme solarized
+set background=dark
+
+" clear the gutter bg color
+highlight clear SignColumn
+
+filetype plugin indent on
 
 " Softtabs, 2 spaces
 set tabstop=2
@@ -69,6 +43,9 @@ set expandtab
 " set line numbers
 set number
 set numberwidth=5
+
+" turn off line number highlighting in solarized
+highlight LineNr ctermbg=NONE
 
 " display excess whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
@@ -125,9 +102,6 @@ nnoremap <cr> :noh<CR><CR>:<backspace>
 " turn off highlighting matching parens
 :let loaded_matchparen = 1
 
-" remap  escape in insert mode only
-imap jj <Esc>
-
 " use the system clipboard
 set clipboard=unnamed
 
@@ -141,3 +115,9 @@ map <Leader>t :w<CR>:call RunCurrentSpecFile()<CR>
 map <Leader>s :w<CR>:call RunNearestSpec()<CR>
 map <Leader>l :w<CR>:call RunLastSpec()<CR>
 map <Leader>a :w<CR>:call RunAllSpecs()<CR>
+
+" CtrlP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" Pathogen package manager
+execute pathogen#infect()
