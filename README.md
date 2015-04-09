@@ -1,4 +1,3 @@
-dotfiles
-========
+Configuration files
 
-Configuration files for vim, git and bash (etc).
+Once this is cloned first remove any local copy in ~/ and then symlink each file to the user directory.

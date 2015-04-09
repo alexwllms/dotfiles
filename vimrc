@@ -1,3 +1,6 @@
+" Pathogen package manager
+execute pathogen#infect()
+
 " Use Vim settings, rather then Vi settings. This setting must be as early as
 " possible, as it has side effects.
 set nocompatible
@@ -21,10 +24,14 @@ set incsearch     " do incremental searching
 " set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set autoread      " Read changes to the file immediately
+set cursorline
 
 syntax on
-colorscheme solarized
+colorscheme tomorrow_night
 set background=dark
+
+hi Normal ctermbg=none
+highlight NonText ctermbg=none
 
 " clear the gutter bg color
 highlight clear SignColumn
@@ -119,5 +126,3 @@ map <Leader>a :w<CR>:call RunAllSpecs()<CR>
 " CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" Pathogen package manager
-execute pathogen#infect()

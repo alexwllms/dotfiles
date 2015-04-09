@@ -26,6 +26,9 @@ export PROMPT_COMMAND=setup_prompt
 # Load in the git branch prompt script.
 source ~/.git-prompt.sh
 
+# Add completion for git
+source ~/.git-completion.bash
+
 export PS1="\[\e[33m\]\w\[\e[m\]\$(__git_ps1)\[\e[33m\] \$ \[\e[m\]"
 export PS2='> '
 
@@ -47,5 +50,10 @@ export EDITOR=vim
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Wrap git in 'hug'
+# Wrap git in 'hub'
 eval "$(hub alias -s)"
+
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH
