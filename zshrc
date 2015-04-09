@@ -6,9 +6,6 @@ export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 export EDITOR="vim"
 
-# Set ZSH git completion
-fpath=(~/.zsh $fpath)
-
 # Turns on command substitution in the prompt
 setopt prompt_subst
 
@@ -24,19 +21,37 @@ setopt NO_BEEP
 # Case insensitive globbing
 setopt NO_CASE_GLOB
 
-# Load aliases from .aliases
-if [ -f ~/.aliases ]; then
-  . ~/.aliases
-fi
-
 # Add branch name to right hand side of the prompt
 setopt prompt_subst
 source ~/.git-prompt.sh
 export RPROMPT=$'$(__git_ps1 "%s")'
 
-# Add tab completion for git
-source ~/.git-completion.bash
-
 # Required for the rbenv ruby version manager.
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
+
+alias vz="vim ~/.zshrc"
+alias vv="vim ~/.vimrc"
+alias vt="vim ~/.tmux.conf"
+
+alias ls="ls -1"
+alias la="ls -la -1"
+
+alias s="git status -b"
+alias commit="git commit --verbose"
+alias checkout="git checkout"
+alias branch="git branch"
+alias diff="git diff"
+alias log="git log --graph"
+alias add="git add --all :/"
+alias push="git push origin"
+alias pull="git pull --rebase origin"
+alias pr="git pull-request"
+
+alias ber="bundle exec ruby"
+alias be="bundle exec"
+
+alias postgres="postgres -D /usr/local/var/postgres"
+
+# Wrap git in 'hub'
+eval "$(hub alias -s)"
