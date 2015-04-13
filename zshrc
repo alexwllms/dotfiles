@@ -1,5 +1,6 @@
 export PROMPT='%~%b $ '
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
+export CLICOLOR=1
 export GREP_OPTIONS="--color"
 export HISTSIZE=100000
 export HISTFILE="$HOME/.history"
@@ -44,8 +45,9 @@ alias branch="git branch"
 alias diff="git diff"
 alias log="git log --graph"
 alias add="git add --all :/"
-alias push="git push origin"
-alias pull="git pull --rebase origin"
+alias push="git push"
+alias pull="git pull"
+alias rebase="git rebase"
 alias pr="git pull-request"
 
 alias ber="bundle exec ruby"
