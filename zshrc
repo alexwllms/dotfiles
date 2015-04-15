@@ -1,4 +1,4 @@
-export PROMPT='%~%b $ '
+export PROMPT='%F{yellow}%~%b $ '
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
 export CLICOLOR=1
 export GREP_OPTIONS="--color"
@@ -10,8 +10,9 @@ export EDITOR="vim"
 # Needs to be at the top of the zshrc file
 eval "$(hub alias -s)"
 
-# Turns on command substitution in the prompt
-setopt prompt_subst
+# Disable C-s
+stty start undef
+stty stop undef
 
 setopt auto_pushd
 setopt AUTOCD
@@ -48,3 +49,6 @@ alias ber="bundle exec ruby"
 alias be="bundle exec"
 
 alias postgres="postgres -D /usr/local/var/postgres"
+
+zstyle ':completion:*' completer _complete _ignored
+zstyle :compinstall filename '~/.zshrc'

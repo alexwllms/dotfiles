@@ -45,6 +45,17 @@ set expandtab
 " set line numbers
 set number
 set numberwidth=5
+set relativenumber
+
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
 
 highlight CursorLineNr ctermfg=yellow guifg=yellow
 
