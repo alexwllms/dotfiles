@@ -21,7 +21,7 @@
 [branch]
 	autosetuprebase = always
 [push]
-	default = simple
+	default = tracking
 [filter "media"]
 	required = true
 	clean = git media clean %f
