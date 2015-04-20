@@ -45,6 +45,7 @@ alias gb="git branch"
 alias gd="git diff --word-diff"
 alias gl="git log --oneline --decorate"
 alias ga="git add --all :/"
+alias gpom="git push origin master"
 
 alias ber="bundle exec ruby"
 alias be="bundle exec"
