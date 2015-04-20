@@ -1,4 +1,3 @@
-export PROMPT='%F{yellow}%~%b @$(__git_ps1 "%s") $ '
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
 export CLICOLOR=1
 export GREP_OPTIONS="--color"
@@ -26,7 +25,7 @@ setopt NO_CASE_GLOB
 # Add branch name to right hand side of the prompt
 setopt prompt_subst
 source ~/.git-prompt.sh
-export RPROMPT=$'$(__git_ps1 "%s")'
+export PROMPT='%F{yellow}%~%b $(__git_ps1 "%s") $ '
 
 # Required for the rbenv ruby version manager.
 export PATH="$HOME/.rbenv/bin:$PATH"
