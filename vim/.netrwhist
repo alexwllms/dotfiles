@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/alexwilliams/dotfiles'
 let g:netrw_dirhist_2='/Users/alexwilliams/mas/rad_consumer'
 let g:netrw_dirhist_3='/Users/alexwilliams/mas/rad_consumer/config'
 let g:netrw_dirhist_4='/Users/alexwilliams/mas/rad_consumer'
 let g:netrw_dirhist_5='/Users/alexwilliams/mas/rad_consumer/.git'
 let g:netrw_dirhist_6='/Users/alexwilliams/mas/rad_consumer/.git/hooks'
+let g:netrw_dirhist_7='/Users/alexwilliams/mas/rad_consumer'

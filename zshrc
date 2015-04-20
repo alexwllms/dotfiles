@@ -1,4 +1,4 @@
-export PROMPT='%F{yellow}%~%b $ '
+export PROMPT='%F{yellow}%~%b @$(__git_ps1 "%s") $ '
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
 export CLICOLOR=1
 export GREP_OPTIONS="--color"
@@ -39,16 +39,20 @@ alias vt="vim ~/.tmux.conf"
 alias ls="ls -1"
 alias la="ls -la -1"
 
-alias gs="git status -b"
+alias gs="git status -sb"
 alias gc="git commit --verbose"
 alias gb="git branch"
-alias gl="git log --graph"
+alias gd="git diff --word-diff"
+alias gl="git log --oneline --decorate"
 alias ga="git add --all :/"
 
 alias ber="bundle exec ruby"
 alias be="bundle exec"
 
 alias postgres="postgres -D /usr/local/var/postgres"
+
+alias rad="cd ~/mas/rad"
+alias radc="cd ~/mas/rad_consumer"
 
 zstyle ':completion:*' completer _complete _ignored
 zstyle :compinstall filename '~/.zshrc'
