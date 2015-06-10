@@ -7,7 +7,7 @@ export SAVEHIST=$HISTSIZE
 export EDITOR="vim"
 
 # Needs to be at the top of the zshrc file
-eval "$(hub alias -s)"
+#eval "$(hub alias -s)"
 
 # Disable C-s
 stty start undef
@@ -38,7 +38,7 @@ alias vt="vim ~/.tmux.conf"
 alias ls="ls -1"
 alias la="ls -la -1"
 
-alias gs="git status -sb"
+alias gs="git status"
 alias gc="git commit --verbose"
 alias gb="git branch"
 alias gd="git diff --word-diff"
