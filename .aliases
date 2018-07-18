@@ -1,0 +1,15 @@
+alias vz="vim ~/.zshrc"
+alias vv="vim ~/.vimrc"
+
+alias ls="ls -1"
+alias la="ls -la -1"
+
+alias gs="git status"
+alias gc="git commit --verbose"
+alias gb="git branch"
+alias gd="git diff --word-diff"
+alias gl="git log --oneline --decorate"
+alias ga="git add --all :/"
+alias gpom="git push origin master"
+
+alias postgres="postgres -D /usr/local/var/postgres"
