@@ -1,0 +1,4 @@
+# Add this snippet to .zshrc file to load external .aliases file
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
